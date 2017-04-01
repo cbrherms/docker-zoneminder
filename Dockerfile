@@ -3,6 +3,27 @@
 FROM quantumobject/docker-baseimage:15.10
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
+#Add Freenas container metadata
+LABEL org.freenas.interactive="false" \
+      org.freenas.version="2" \
+      org.freenas.upgradeable="true" \
+      org.freenas.expose-ports-at-host="true" \
+      org.freenas.autostart="true" \
+      org.freenas.web-ui-protocol="http" \
+      org.freenas.web-ui-port="8081" \
+      org.freenas.web-ui-path="" \
+      org.freenas.port-mappings="8081:8081/tcp" \
+      org.freenas.volumes="[						\
+          {								\
+              \"name\": \"/config\",					\
+              \"descr\": \"Database and Sickbeard configs\"		\
+          },								\
+          {								\
+              \"name\": \"/data\",					\
+              \"descr\": \"Sickbeard data volume\"			\
+          }								\
+      ]" 
+
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
 RUN echo "deb http://archive.ubuntu.com/ubuntu `cat /etc/container_environment/DISTRIB_CODENAME`-backports main restricted universe" >> /etc/apt/sources.list  \
