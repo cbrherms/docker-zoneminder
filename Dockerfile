@@ -30,7 +30,7 @@ LABEL org.freenas.interactive="false" \
               \"name\": \"/var/backups\",					\
               \"descr\": \"Zoneminder backups\"			\
           }								\
-      ]" 
+      ]" \
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
