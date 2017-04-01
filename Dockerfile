@@ -11,8 +11,8 @@ LABEL org.freenas.interactive="false" \
       org.freenas.autostart="true" \
       org.freenas.web-ui-protocol="http" \
       org.freenas.web-ui-port="80" \
-      org.freenas.web-ui-path="" \
-      org.freenas.port-mappings="80:80/tcp"
+      org.freenas.web-ui-path="zm" \
+      org.freenas.port-mappings="80:80/tcp,443:443/tcp"
       #org.freenas.volumes="[						\
       #    {								      \
       #        \"name\": \"/var/lib/mysql\",		      \
