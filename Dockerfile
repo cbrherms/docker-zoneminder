@@ -13,16 +13,24 @@ LABEL org.freenas.interactive="false" \
       org.freenas.web-ui-port="80" \
       org.freenas.web-ui-path="" \index.php
       org.freenas.port-mappings="80:80/tcp" \
-      # org.freenas.volumes="[						\
-      #    {								\
-      #        \"name\": \"/config\",					\
-      #        \"descr\": \"Application config\"		\
-      #    },								\
-      #    {								\
-      #        \"name\": \"/data\",					\
-      #        \"descr\": \"Zoneminder data folder\"			\
-      #    }								\
-      #]" 
+      org.freenas.volumes="[						\
+          {								\
+              \"name\": \"/var/lib/mysql\",					\
+              \"descr\": \"MYSQL Libraries\"		\
+          },	
+          {								\
+              \"name\": \"/usr/share/zoneminder/events\",					\
+              \"descr\": \"Zoneminder Events\"		\
+          },
+          {								\
+              \"name\": \"/usr/share/zoneminder/images\",					\
+              \"descr\": \"Zoneminder Images\"		\
+          },
+          {								\
+              \"name\": \"/var/backups\",					\
+              \"descr\": \"Zoneminder backups\"			\
+          }								\
+      ]" 
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
