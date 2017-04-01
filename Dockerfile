@@ -16,11 +16,11 @@ LABEL org.freenas.interactive="false" \
       org.freenas.volumes="[						\
           {								\
               \"name\": \"/config\",					\
-              \"descr\": \"Database and Sickbeard configs\"		\
+              \"descr\": \"Application config\"		\
           },								\
           {								\
               \"name\": \"/data\",					\
-              \"descr\": \"Sickbeard data volume\"			\
+              \"descr\": \"Zoneminder data folder\"			\
           }								\
       ]" 
 
