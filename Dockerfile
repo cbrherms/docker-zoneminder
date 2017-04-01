@@ -1,7 +1,7 @@
 #name of container: docker-zoneminder
 #versison of container: 0.5.8
 FROM quantumobject/docker-baseimage:15.10
-MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
+MAINTAINER Rhys Parker  "rhyswparker@gmail.com"
 
 #Add Freenas container metadata
 LABEL org.freenas.interactive="false" \
