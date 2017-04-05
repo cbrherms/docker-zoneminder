@@ -15,7 +15,7 @@ mysql_install_db
  mysqladmin -u root -pmysqlpsswd reload
  mysqladmin -u root -pmysqlpsswd create zm
 
- #echo "grant select,insert,update,delete on zm.* to 'zmuser'@localhost identified by 'zmpass'; flush privileges; " | mysql -u root -pmysqlpsswd
+ echo "grant select,insert,update,delete on zm.* to 'zmuser'@localhost identified by 'zmpass'; flush privileges; " | mysql -u root -pmysqlpsswd
  echo "GRANT ALL PRIVILEGES ON zm.* to 'zmuser'@'%' identified by 'zmpass'; flush privileges; " | mysql -u root -pmysqlpsswd
 
  DEBIAN_FRONTEND=noninteractive apt-get update
