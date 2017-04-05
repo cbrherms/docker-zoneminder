@@ -24,6 +24,7 @@ else
           mysqladmin -u root -pmysqlpsswd reload
           mysqladmin -u root -pmysqlpsswd create zm
           echo "grant select,insert,update,delete on zm.* to 'zmuser'@'%' identified by 'zmpass'; flush privileges; " | mysql -u root -pmysqlpsswd
+          echo "grant select,insert,update,delete on zm.* to 'zmuser'localhost'%' identified by 'zmpass'; flush privileges; " | mysql -u root -pmysqlpsswd
           mysql -u root -pmysqlpsswd < /usr/share/zoneminder/db/zm_create.sql
           killall mysqld
           sleep 5s
